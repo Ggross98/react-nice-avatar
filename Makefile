@@ -1,6 +1,7 @@
 level?=patch
 
 # Development
+#cross-env NODE_ENV=development 
 lint:
 	@echo "Linting..."
 	@npx eslint .
@@ -9,7 +10,7 @@ lint-fix:
 	@npx eslint --fix .
 dev:
 	@echo "Starting server..."
-	@NODE_ENV=development npx webpack-dev-server --config ./webpack/demo.js --progress
+	@npx webpack-dev-server --config ./webpack/demo.js --progress
 .PHONY: lint lint-fix dev
 
 # Test
@@ -28,7 +29,7 @@ build:
 build-demo:
 	@echo "Building demo..."
 	@rm -rf ./demo/dist
-	@NODE_ENV=production npx webpack --config ./webpack/demo.js --progress --bail
+	@cross-env NODE_ENV=production npx webpack --config ./webpack/demo.js --progress --bail
 release:
 	@echo "Release $(level)"
 	@echo "Adding tag and modify the CHANGELOG"

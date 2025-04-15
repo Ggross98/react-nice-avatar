@@ -71,12 +71,14 @@ interface DefaultOptions {
 
 export const defaultOptions: DefaultOptions = {
   sex: ["man", "woman"],
-  faceColor: ["#F9C9B6", "#AC6651"],
+  // faceColor: ["#F9C9B6", "#AC6651"],
+  faceColor: ["#7B4939", "#B3715D", "#F8D3A6", "#F9C9B6"],
   earSize: ["small", "big"],
-  hairColor: ["#000", "#fff", "#77311D", "#FC909F", "#D2EFF3", "#506AF4", "#F48150"],
-  hairStyleMan: ["normal", "thick", "mohawk"],
+  hairColor: ["#F0F0F0", "#000000", "#77311D", "#FC909F", "#D2EFF3", "#31372F",
+    "#506AF4", "#F48150", "#A20000", "#F1CB0D", "#990099", "#905738", "#003399", "#00CC99"],
+  hairStyleMan: ["normal", "thick", "mohawk", "bald"],
   hairStyleWoman: ["normal", "womanLong", "womanShort"],
-  hatColor: ["#000", "#fff", "#77311D", "#FC909F", "#D2EFF3", "#506AF4", "#F48150"],
+  hatColor: ["#F0F0F0", "#fff", "#77311D", "#FC909F", "#D2EFF3", "#506AF4", "#F48150"],
   hatStyle: ["beanie", "turban", "none"],
   eyeBrowWoman: ["up", "upWoman"],
   eyeStyle: ["circle", "oval", "smile"],
